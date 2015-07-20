@@ -1,0 +1,119 @@
+body {
+  background-color: #efefef;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+.wrapper {
+  width: 700px;
+  margin: 70px auto 0;
+}
+
+#header {
+  color: #000000;
+  margin: 50px;
+  padding: 10px 20px 10px 20px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+p {
+  font-size: 25px;
+  line-height: 30px;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+label {
+  display: inline-block;
+  font-style: bold;
+  font-size: 20px;
+  margin-right: 20px;
+  width: 100px;
+}
+
+input {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 5px;
+  font-size: 15px;
+}
+
+.right {
+  text-align: right;
+}
+
+#submitButton {
+  color: #000000;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  border: none;
+}
+
+#apparel-listing {
+  position: relative;
+  margin: 20px 50px;
+  background-color: #222;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  padding: 20px;
+  color: #FFFFFF;
+  font-size: 17px;
+  line-height: 25px;
+}
+
+.listings {
+  width:100%;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color:#000000;
+  background-color: #FFFFFF;
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+ul {
+  display: inline-block;
+  list-style: none;
+}
+
+h6 {
+  font-size:11px;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+li {
+  position: relative;
+  margin: 20px 50px;
+  background-color: #FF6600;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  padding: 20px;
+  color: #FFFFFF;
+  font-size: 17px;
+  line-height: 25px;
+}
+
+.sold {
+  text-decoration: line-through;
+  background-color: #1142AA;
+}
+
+.editing {
+  text-decoration: none;
+  background-color: #FFA900;
+}
+

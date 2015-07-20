@@ -1,0 +1,14 @@
+{
+  "name": "apparel-listings",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "version": "0.0.0",
+  "engines": {
+    "node": "0.10.x"
+  },
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "express": "~4.11.2"
+  }
+}

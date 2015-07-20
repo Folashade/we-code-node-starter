@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="reset.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+
+
+    <div class="wrapper">
+      <div id="header">
+          <h1>Apparel Store</h1>
+      </div>
+
+      <div id="apparel-listing">
+        <p>Create a New Listing</p>
+        <form name="myform" action="javascript:addListing()">
+          <div class="row">
+            <label>Author:</label>  <input id="author-input" name="Author" type="text" placeholder="Puppet"/> 
+          </div>
+          <div class="row">
+            <label>Description:</label>  <input id="desc-input" name="Desc" type="text" placeholder="purple"/>
+          </div>
+          <div class="row">
+            <label>Price:</label>  <input id="price-input" name="Price" type="text" placeholder="23.70"/>
+          </div>
+          <div class="row right">
+            <input id="submitButton" name="Submit"  type="submit" value="Add Listing"/>
+          </div>
+        </form>
+      </div>
+
+      <ul class="listings"></ul>
+
+    </div>
+
+
+	<script src="jquery-1.9.0.js"></script>
+	<script src="listings.js"></script>
+	</body>
+</html>
