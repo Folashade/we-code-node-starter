@@ -1,37 +1,39 @@
 # README
 
-This readme will walk you through setting up the Apparel Store web application. *Next Steps* suggests tasks to modify the app to better familiarize you with how it is working.
+Use this readme to get started setting up and exploring the Apparel Store web application. *Next Steps* suggests tasks to modify the app to better familiarize you with how it works.
 
 # About the App
 
-This sample template creates a web application that allows you to create "listings" by filling in a few fields in a form.
+This sample template creates a web application that allows you to create "listings" by filling in a few fields in a form. The listings are stored in the data.txt file.
 
-You can mark a listing as "Sold" which will change the color of the listing and use strikeout text for the fields. 
+You can mark a listing as sold which changes the color of the listing and strikes out its text. 
 
-You can also click "Delete" on a listing to permanently delete it from the data.txt file.
+You can also click **Delete** on a listing to permanently delete it from the data.txt file.
 
-There are notes in the code to help you get a better idea of which parts are doing what. Don't be afraid to open the files and read through them to get a better sense of how things are working together. 
+Read the notes in the code to get a better idea of which parts are doing what. Don't be afraid to open the files and read through them to learn how things are working together. 
 
 ## Required tools
+
+If you don't already have these tools, download and install them before you start working with the Apparel Store app.
 
 * Modern web browser (may we suggest [Chrome?](https://www.google.com/chrome/browser))
 * Command Line Interface (CLI)
 	* Mac OSX: Terminal is already installed, or try [iTerm](https://www.iterm2.com/)
 	* Windows: Command Prompt (DOS)
-* [Node.js](https://nodejs.org/download/) should be downloaded and installed on your computer.
+* [Node.js](https://nodejs.org/download/) 
 * A text editor or coding tool of your choice. [Sublime Text 2](http://www.sublimetext.com/2) is available for free for Mac and Windows, but will occassionally ask you to purchase a license when you save your files. 
 
 ## Setup
 
-Once you have Node.js installed, open your CLI and navigate to the project folder.
+Once you have all prerequisites installed, open your CLI and navigate to the project folder.
 
-_New to command line?_ You can navigate to the project folder using `cd` (which stands for change directory). If you know the full path of the directory you can type it in, or you can click and drag the folder over your CLI window and it will automatically fill in the path to that folder.
+_New to command line?_ Navigate to the project folder using `cd` (which stands for change directory). If you know the full path of the directory you can type it in, or you can click and drag the folder over to your CLI window and it will automatically fill in the path to that folder.
 
 		cd /Users/mycomp/Documents/we-code-node-starter
 
 Press return, and you'll be taken to that folder.
 
-Next, type `npm install` and press return. You should see several packages and dependencies being installed.
+To install the app, type `npm install` and press return. You should see several packages and dependencies being installed.
 
 ~~~
 	npm WARN package.json apparel-listings@0.0.0 No repository field.
@@ -75,15 +77,15 @@ Next, type `npm install` and press return. You should see several packages and d
 	└── type-is@1.6.5 (media-typer@0.3.0, mime-types@2.1.3)
 ~~~
 
-Next, run `node app.js` in the command line. This starts your app. After a few seconds, you should see a success message. Keep your command line tool open, and open a new tab in your web browser. In the URL bar, navigate to `http://localhost:8889/static/index.html`.
+To start the app, type `node app.js` in the command line. After a few seconds, you should see a success message. Keep your command line tool open, and open a new tab in your web browser. In the URL bar, type `http://localhost:8889/static/index.html`.
 
 When the page loads, there should be a sample item already in your store. To see the app in action, resize your browser window to take up one half of the screen, and the command line to take up the other half. Watch what happens in the command line when you click the "Delete" button on the existing listing. 
 
 		Success reading file:  data.txt
 
-In the browser, create a new listing by entering an Author, Description, and Price in the form and clicking "Add Listing". You should get the same success message. The app is altering your entries in a .txt file as you interact with the browser. 
+In the browser, create a new listing by entering an Author, Description, and Price in the form and clicking **Add Listing**. You should get the same success message. The app is changing entries in the data.txt file as you interact with the browser. 
 
-If you want to stop serving the page to your browser, hit Control+C in the command line.
+To stop serving the page to your browser, press Control+C in the CLI.
 
 
 ### Exploratory Questions 
@@ -92,17 +94,17 @@ What happens if you open data.txt and edit the file?
 
 What file(s) would you change to add a field to the form?
 
-Where is the date being filled in? How would you change the timezone to Chicago (CST)?
+How is the date being filled in? How would you change the timezone to Chicago (CST)?
 
 ## Next Steps
 
-Try some of these tasks on your own to improve this app, and famliarize (or refresh) yourself with JavaScript and Node.js.
+Try some of these tasks on your own to improve this app, and familiarize (or refresh) yourself with JavaScript and Node.js.
 
 * Create an alert when the user tries to Delete a listing, and ask them to verify that they want to permanently delete the item.
 
 * Add a new field to the form, 'Size'. Make the user select their size from a drop-down menu.
 
-* Advanced: Create an "Edit" function, so that you don't have to delete a listing or open the .txt file if you make a typo.
+* Advanced: Create an "Edit" function, so that the user doesn't have to delete a listing or open the data.txt file if they make a typo.
 
 ## Resources
 
