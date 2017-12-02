@@ -29,17 +29,18 @@ app.post('/upload', function(req, res) {
   req.files.sampleFile.mv('Documents/'+req.files.sampleFile.name, function(err) {
     if (err)
       return res.status(500).send(err);
-  }); 
+  });
 
   listings.push(item);
   writeFile("data.txt", JSON.stringify(listings));
 
-  res.send({
-    item: item,
-    success: true
-  });
+  res.send('Successful submit!');
 
 });
+
+
+  
+
 
 // Asynchronously read file contents, then call callbackFn
 function readFile(filename, defaultData, callbackFn) {
@@ -93,7 +94,7 @@ app.post("/listings", function(request, response) {
               "price": Number(request.body.price),
               "sold": false };
 
-  var successful = 
+  var successful =
       (item.desc !== undefined) &&
       (item.author !== undefined) &&
       (item.price !== undefined);
@@ -105,7 +106,7 @@ app.post("/listings", function(request, response) {
     item = undefined;
   }
 
-  response.send({ 
+  response.send({
     item: item,
     success: successful
   });

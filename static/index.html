@@ -5,14 +5,20 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <style>
+        #map {
+            height: 350px;
+            width: 100%;
+        }
+    </style>
   </head>
   <body>
 
 
       <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-
         <div class="logoWrap">
-          <a href="index.html"><img class= "logo" src="newavelogo.jpg" alt="logo"></a>
+          <img class= "logo" src="newavelogo.jpg" alt="logo">
         </div>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -38,44 +44,52 @@
         <img src="staff.jpg" alt="New Avenues for Youth Staff">
       </div>
       <br>
-      <div class="container" id="upload-section">
-        <div id="Uploaddata" class="tabcontent">
-          <h3>Add document</h3>
-          <form ref='uploadForm' id='uploadForm' action="http://localhost:8889/upload" method='post' encType="multipart/form-data">
-            <input type="text" name="doctype" placeholder='Essay' />
-            <input type="text" name="data"  placeholder='Revision 2'/>
-            <input type="file" name="sampleFile" />
-            <input class="btn btn-default" type='submit' value='Add Document' />
-
-          </form>
-        </div>
-      </div>
-
-      <div class="container" id="docs-section">
-        <h3>Saved Documents</h3>
-      </div>
       <br>
+
+      <div id="Uploaddata" class="tabcontent container">
+  		<p>Add document</p>
+  		<form ref='uploadForm' id='uploadForm' action='http://localhost:8889/upload' method='post' encType="multipart/form-data">
+  		  <input type="text" name="doctype" placeholder='Essay' />
+  		  <input type="text" name="data"  placeholder='Revision 2'/>
+  		  <input type="file" name="sampleFile" />
+  		  <input type='submit' value='Add Document' />
+  		</form>
+    </div>
+
       <div class="container" id="house-section">
-        <h3>Housing Resources</h3>
+        <script>
+    function initMap() {
+        var latlon= {lat: 45.522224, lng: -122.679826};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: latlon
+        });
+        var marker = new google.maps.Marker({
+            position: latlon,
+            map: map
+        });
+    }
+</script>
+
+<br>
+<br>
       </div>
 
       <div class="container" id="ed-section">
-        <h3>Education Resources</h3>
+        <p><a href="ed.html">Education Resource Search</a></p>
       </div>
 
+  	<script src="jquery-1.9.0.js"></script>
+  	<script src="listings.js"></script>
 
       <div id="footer">
         <div class="newAvesLink">
           <a href="http://newavenues.org/">New Avenues Website</a>
         </div>
 
-        <div class="logoWrap">
-          <img class= "logo" src="newavelogo.jpg" alt="logo">
-        </div>
-     </div>
 
-     <script src="jquery-1.9.0.js"></script>
-     <script src="listings.js"></script>
+
+     </div>
 
 
 	</body>
