@@ -1,6 +1,7 @@
 body {
   background-color: #efefef;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  /*font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+  font-family: 'Open Sans', sans-serif;
 }
 
 h1 {
@@ -82,7 +83,7 @@ h3 {
   font-size: 22px;
 }
 
-li {
+/*li {
   position: relative;
   margin: 20px 50px;
   background-color: #FF6600;
@@ -92,7 +93,7 @@ li {
   color: #FFFFFF;
   font-size: 17px;
   line-height: 25px;
-}
+}*/
 
 .sold {
   text-decoration: line-through;
@@ -107,7 +108,37 @@ li {
 
 
 /*BEGIN CUSTOM CSS*/
-#header {
+.logoWrap {
+    width: 173px;
+}
+
+.logo {
+    float: left;
+    margin-left: 55%;
+    margin-top: 13px;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+  background-color: #DEA02B;
+}
+
+.navbar-nav {
+  padding: 50px;
+}
+
+.nav-item {
+  padding: 15px;
+  font-size: 16px;
+}
+
+.nav-link {
+  color: black;
+
+}
+
+/*#header {
   display: flex;
 }
 
@@ -128,7 +159,7 @@ nav li {
     background: none;
     list-style: none;
     cursor: pointer;
-}
+}*/
 
 
 #footer {
