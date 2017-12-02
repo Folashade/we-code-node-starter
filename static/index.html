@@ -17,9 +17,27 @@
         <nav>
           <a href="mail.html"><li><i class="fa fa-envelope" aria-hidden="true"></i> Mail</li>
           <a href="upload.html"><li><i class="fa fa-upload" aria-hidden="true"></i> Upload</li></a>
+          <a href="documents.html"><li><i class="fa fa-documents" aria-hidden="true"></i> My Documents</li></a>
           <li></li>
           <li></li>
         </nav>
+      </div>
+
+
+      <div id="Uploaddata" class="tabcontent">
+		<p>Add document</p>
+		<form ref='uploadForm' id='uploadForm' action='http://localhost:8889/upload' method='post' encType="multipart/form-data">
+		  <input type="text" name="doctype" placeholder='Essay' />
+		  <input type="text" name="data"  placeholder='Revision 2'/>
+		  <input type="file" name="sampleFile" />
+		  <input type='submit' value='Add Document' />
+		</form>
+
+      </div>
+      <div id="Housing" class="tabcontent">
+	<p> Content </p>
+	<script src="jquery-1.9.0.js"></script>
+	<script src="listings.js"></script>
       </div>
 
 
@@ -31,15 +49,8 @@
         <div class="logoWrap">
           <img class= "logo" src="newavelogo.jpg" alt="logo">
         </div>
+     </div>
 
-      </div>
-
-
-    </div>
-
-
-	<script src="jquery-1.9.0.js"></script>
-	<script src="listings.js"></script>
 
 	</body>
 </html>
