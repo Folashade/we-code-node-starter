@@ -138,6 +138,10 @@ h3 {
 
 }
 
+.staff-image {
+  text-align: center;
+}
+
 /*#header {
   display: flex;
 }
