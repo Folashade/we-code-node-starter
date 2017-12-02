@@ -8,16 +8,13 @@ h1 {
 }
 
 .wrapper {
-  width: 700px;
-  margin: 70px auto 0;
+  width: 100%;
 }
 
 #header {
-  color: #000000;
-  margin: 50px;
+  color: #dda01c;
   padding: 10px 20px 10px 20px;
-  background-color: #FFFFFF;
-  border-radius: 5px;
+  background-color: #dda01c;
   -moz-border-radius: 5px;
 }
 
@@ -117,3 +114,28 @@ li {
   background-color: #FFA900;
 }
 
+
+
+/*BEGIN CUSTOM CSS*/
+#header {
+  display: flex;
+}
+
+.logoWrap {
+    width: 173px;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+  display: flex;
+}
+
+nav li {
+    background: none;
+    list-style: none;
+    cursor: pointer;
+}
