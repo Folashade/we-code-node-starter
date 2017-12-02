@@ -8,16 +8,13 @@ h1 {
 }
 
 .wrapper {
-  width: 700px;
-  margin: 70px auto 0;
+  width: 100%;
 }
 
 #header {
-  color: #000000;
-  margin: 50px;
+  color: #dda01c;
   padding: 10px 20px 10px 20px;
-  background-color: #FFFFFF;
-  border-radius: 5px;
+  background-color: #dda01c;
   -moz-border-radius: 5px;
 }
 
@@ -71,16 +68,6 @@ input {
   width:100%;
 }
 
-a {
-  display: inline-block;
-  text-decoration: none;
-  color:#000000;
-  background-color: #FFFFFF;
-  padding: 5px;
-  margin: 5px;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-}
 
 ul {
   display: inline-block;
@@ -117,3 +104,53 @@ li {
   background-color: #FFA900;
 }
 
+
+
+/*BEGIN CUSTOM CSS*/
+#header {
+  display: flex;
+}
+
+.logoWrap {
+    width: 173px;
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+}
+
+nav {
+  display: flex;
+}
+
+nav li {
+    background: none;
+    list-style: none;
+    cursor: pointer;
+}
+
+
+#footer {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 26px;
+    background: black;
+    padding: 30px 0;
+}
+
+.newAvesLink {
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+}
+
+.newAvesLink a {
+    color: white;
+    text-decoration: none;
+}
+
+.newAvesLink a:hover {
+    color: grey;
+
+}
