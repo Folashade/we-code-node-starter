@@ -3,39 +3,75 @@
   <head>
     <link href="reset.css" rel="stylesheet" type="text/css">
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
   <body>
 
 
-    <div class="wrapper">
-      <div id="header">
-          <h1>Apparel Store</h1>
+    <div>
+
+      <!-- <div id="header">
+        <div class="logoWrap">
+          <img class= "logo" src="newavelogo.jpg" alt="logo">
+        </div>
+        <nav>
+          <li><i class="fa fa-envelope" aria-hidden="true"></i> Mail</li>
+          <li><i class="fa fa-upload" aria-hidden="true"></i> Upload</li>
+          <li></li>
+          <li></li>
+        </nav>
+      </div> -->
+
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="logoWrap">
+          <img class= "logo" src="newavelogo.jpg" alt="logo">
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Upload</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Documents</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Housing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Education</a>
+            </li>
+          </ul>
+
+        </div>
+      </nav>
+
+      <div class="staff-image">
+        <img src="staff.jpg" alt="New Avenues for Youth Staff">
       </div>
 
-      <div id="apparel-listing">
-        <p>Create a New Listing</p>
-        <form name="myform" action="javascript:addListing()">
-          <div class="row">
-            <label>Author:</label>  <input id="author-input" name="Author" type="text" placeholder="Puppet"/> 
-          </div>
-          <div class="row">
-            <label>Description:</label>  <input id="desc-input" name="Desc" type="text" placeholder="purple"/>
-          </div>
-          <div class="row">
-            <label>Price:</label>  <input id="price-input" name="Price" type="text" placeholder="23.70"/>
-          </div>
-          <div class="row right">
-            <input id="submitButton" name="Submit"  type="submit" value="Add Listing"/>
-          </div>
-        </form>
+      <div id="footer">
+        <div class="newAvesLink">
+          <a href="http://newavenues.org/">New Avenues Website</a>
+        </div>
+
+        <div class="logoWrap">
+          <img class= "logo" src="newavelogo.jpg" alt="logo">
+        </div>
+
       </div>
 
-      <ul class="listings"></ul>
 
     </div>
 
 
 	<script src="jquery-1.9.0.js"></script>
 	<script src="listings.js"></script>
+
 	</body>
 </html>
