@@ -104,6 +104,10 @@ li {
   background-color: #FFA900;
 }
 
+a {
+    text-decoration: none;
+}
+
 
 
 /*BEGIN CUSTOM CSS*/
