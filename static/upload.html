@@ -3,40 +3,46 @@
   <head>
     <link href="reset.css" rel="stylesheet" type="text/css">
     <link href="style.css" rel="stylesheet" type="text/css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   </head>
   <body>
 
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+      <a href="#"></a>
 
-    <div class="wrapper">
-
-      <div id="header">
-        <div class="logoWrap">
-          <img class= "logo" src="newavelogo.jpg" alt="logo">
-        </div>
-        <nav>
-          <a href="mail.html"><li><i class="fa fa-envelope" aria-hidden="true"></i> Mail</li>
-          <a href="upload.html"><li><i class="fa fa-upload" aria-hidden="true"></i> Upload</li></a>
-          <li></li>
-          <li></li>
-        </nav>
+      <div class="logoWrap">
+        <a href="index.html"><img class= "logo" src="newavelogo.jpg" alt="logo"></a>
       </div>
 
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="upload.html">Upload</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Documents</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Housing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Education</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-      <div id="footer">
-        <div class="newAvesLink">
-          <a href="http://newavenues.org/">New Avenues Website</a>
-        </div>
-
-        <div class="logoWrap">
-          <img class= "logo" src="newavelogo.jpg" alt="logo">
-        </div>
-
+    <div id="footer">
+      <div class="newAvesLink">
+        <a href="http://newavenues.org/">New Avenues Website</a>
       </div>
 
+      <div class="logoWrap">
+        <img class= "logo" src="newavelogo.jpg" alt="logo">
+      </div>
 
     </div>
-
 
 	<script src="jquery-1.9.0.js"></script>
 	<script src="listings.js"></script>

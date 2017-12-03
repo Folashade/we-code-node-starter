@@ -5,29 +5,18 @@
     <link href="style.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <style>
+        #map {
+            height: 350px;
+            width: 100%;
+        }
+    </style>
   </head>
   <body>
 
 
-    <div>
-
-      <!-- <div id="header">
-        <div class="logoWrap">
-          <img class= "logo" src="newavelogo.jpg" alt="logo">
-        </div>
-        <nav>
-          <a href="mail.html"><li><i class="fa fa-envelope" aria-hidden="true"></i> Mail</li>
-          <a href="upload.html"><li><i class="fa fa-upload" aria-hidden="true"></i> Upload</li></a>
-          <li></li>
-          <li></li>
-        </nav>
-      </div> -->
-
       <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
         <div class="logoWrap">
           <img class= "logo" src="newavelogo.jpg" alt="logo">
         </div>
@@ -35,16 +24,16 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="#">Upload</a>
+              <a class="nav-link" href="#upload-section">Upload</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Documents</a>
+              <a class="nav-link" href="#docs-section">Documents</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Housing</a>
+              <a class="nav-link" href="#house-section">Housing</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Education</a>
+              <a class="nav-link" href="#ed-section">Education</a>
             </li>
           </ul>
 
@@ -54,24 +43,54 @@
       <div class="staff-image">
         <img src="staff.jpg" alt="New Avenues for Youth Staff">
       </div>
+      <br>
+      <br>
+
+      <div id="Uploaddata" class="tabcontent container">
+  		<p>Add document</p>
+  		<form ref='uploadForm' id='uploadForm' action='http://localhost:8889/upload' method='post' encType="multipart/form-data">
+  		  <input type="text" name="doctype" placeholder='Essay' />
+  		  <input type="text" name="data"  placeholder='Revision 2'/>
+  		  <input type="file" name="sampleFile" />
+  		  <input type='submit' value='Add Document' />
+  		</form>
+    </div>
+
+      <div class="container" id="house-section">
+        <script>
+    function initMap() {
+        var latlon= {lat: 45.522224, lng: -122.679826};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: latlon
+        });
+        var marker = new google.maps.Marker({
+            position: latlon,
+            map: map
+        });
+    }
+</script>
+
+<br>
+<br>
+      </div>
+
+      <div class="container" id="ed-section">
+        <p><a href="ed.html">Education Resource Search</a></p>
+      </div>
+
+  	<script src="jquery-1.9.0.js"></script>
+  	<script src="listings.js"></script>
 
       <div id="footer">
         <div class="newAvesLink">
           <a href="http://newavenues.org/">New Avenues Website</a>
         </div>
 
-        <div class="logoWrap">
-          <img class= "logo" src="newavelogo.jpg" alt="logo">
-        </div>
-
-      </div>
 
 
-    </div>
+     </div>
 
-
-	<script src="jquery-1.9.0.js"></script>
-	<script src="listings.js"></script>
 
 	</body>
 </html>

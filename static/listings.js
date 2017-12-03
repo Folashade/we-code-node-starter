@@ -5,6 +5,7 @@
   // Debugging - console.logs run only when true
   debug = false;
 
+
   // Print function
   var print = function(input){
 	if (debug === true){
@@ -15,30 +16,47 @@
   // Global datastore
   var listings;
 
+  function openTab(evt, cityName) {
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+  } 
+
   // Implement addListing()
   function addListing(){
 	var newListing = {};
 	
 	console.log("hello");	
-	var ai = $('#author-input').val();
-	var di = $('#desc-input').val();
-	var pi = $('#price-input').val();
+	var ai = $('#doctype-input').val();
+	var pi = $('#data-input').val();
 	
-	newListing.author = ai;
-	newListing.desc = di;
-	newListing.price = pi;
+	newListing.doctype = ai;
+	newListing.data = pi;
 	newListing.date = new Date();
 
-	print(newListing);
-	
+//	print(newListing);
+
 	listings.push(newListing);
-	window.add(di, ai, pi);
+	window.add(ai, pi);
 	refreshDOM();
 	
 	// Clear Inputs
-	$('#author-input').val("");
-	$('#desc-input').val("");
-	$('#price-input').val("");
+	$('#doctype-input').val("");
+	$('#data-input').val("");
   }
  
 
@@ -53,10 +71,9 @@
 		var currentListing = listings[i];
 		var listItem = $("<li>");
 		// content
-		listItem.append($("<h3>").html(currentListing.author));
+		listItem.append($("<h3>").html(currentListing.doctype));
 		listItem.append("<h6>" + currentListing.date + "</h6>");
-		listItem.append("<p>" + currentListing.desc + "</p>");
-		listItem.append("<p>$" + currentListing.price + "</p>");
+		listItem.append("<p>$" + currentListing.data + "</p>");
 		
 		if (currentListing.sold === true) {
 			print("its sold already");
@@ -65,31 +82,17 @@
 		
 		
 		// delete button
-		var delButton = $("<a class='del'>").attr("id", i).html("Delete");
-		listItem.append(delButton);
-		delButton.click(function(){
-			var buttonClicked = $(this);
-			var buttonID = buttonClicked.attr("id");
-			print("delete");
-			listings.splice(buttonID, 1);
-			window.del(buttonID);
-			refreshDOM();
-		});
+		//var delButton = $("<a class='del'>").attr("id", i).html("Delete");
+		//listItem.append(delButton);
+		//delButton.click(function(){
+		//	var buttonClicked = $(this);
+		//	var buttonID = buttonClicked.attr("id");
+		//	print("delete");
+		//	listings.splice(buttonID, 1);
+		//	window.del(buttonID);
+		//	refreshDOM();
+		//});
 		
-		// sold button
-		var soldButton = $("<a>").attr("id", i).html("Sold!");
-		listItem.append(soldButton);
-		soldButton.click(function(){
-			var buttonClicked = $(this);
-			var buttonID = buttonClicked.attr("id");
-
-			buttonClicked.parent().addClass("sold");
-			listings[buttonID].sold = true;//!(listings[buttonID].sold);
-			
-			/* edit(id, desc, author, price, sold) */
-			window.edit(buttonID, l.desc, l.author, undefined, true );
-			// refreshDOM();
-		});
 		
 		// listItem += "</li>";
 		
@@ -111,20 +114,20 @@
     });
   }
 
-  // Implement the add(desc, author, price) function
-  function add(desc, author, price) {
+  // Implement the add(desc, doctype, data) function
+  function add(doctype, data) {
     $.ajax({
       type: "post",
-      data: {"desc": desc, "author": author, "price": price},
+      data: {"doctype": doctype, "data": data},
       url: "/listings",
       success: function(data) { }
     });
   }
 
-  function edit(id, desc, author, price, sold) {
+  function edit(id, doctype, data, sold) {
     $.ajax({
       type: "put",
-      data: {desc: desc, author: author, price: price, sold: sold},
+      data: {doctype: doctype, data: data, sold: sold},
       url: "/listings/" + id,
       success: function(data) { }
     });
