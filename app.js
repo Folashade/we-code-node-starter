@@ -1,4 +1,6 @@
 var express = require("express"); // imports express
+const fileUpload=require('express-fileupload');
+//var multer = require('multer');
 var app = express();        // create a new instance of express
 
 // imports the fs module (reading and writing to a text file)
@@ -13,6 +15,32 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // The global datastore for this example
 var listings;
+
+app.use(fileUpload());
+app.post('/upload', function(req, res) {
+  if (!req.files)
+    return res.status(400).send('No files uploaded');
+
+  console.log(req.body);
+  var item = {"doctype": req.body.doctype,
+              "date": new Date(),
+              "desc": req.body.data};
+
+  req.files.sampleFile.mv('Documents/'+req.files.sampleFile.name, function(err) {
+    if (err)
+      return res.status(500).send(err);
+  });
+
+  listings.push(item);
+  writeFile("data.txt", JSON.stringify(listings));
+
+  res.send('Successful submit!');
+
+});
+
+
+  
+
 
 // Asynchronously read file contents, then call callbackFn
 function readFile(filename, defaultData, callbackFn) {
@@ -66,7 +94,7 @@ app.post("/listings", function(request, response) {
               "price": Number(request.body.price),
               "sold": false };
 
-  var successful = 
+  var successful =
       (item.desc !== undefined) &&
       (item.author !== undefined) &&
       (item.price !== undefined);
@@ -78,7 +106,7 @@ app.post("/listings", function(request, response) {
     item = undefined;
   }
 
-  response.send({ 
+  response.send({
     item: item,
     success: successful
   });

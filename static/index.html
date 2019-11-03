@@ -3,39 +3,94 @@
   <head>
     <link href="reset.css" rel="stylesheet" type="text/css">
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <style>
+        #map {
+            height: 350px;
+            width: 100%;
+        }
+    </style>
   </head>
   <body>
 
 
-    <div class="wrapper">
-      <div id="header">
-          <h1>Apparel Store</h1>
+      <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+        <div class="logoWrap">
+          <img class= "logo" src="newavelogo.jpg" alt="logo">
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#upload-section">Upload</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#docs-section">Documents</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#house-section">Housing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#ed-section">Education</a>
+            </li>
+          </ul>
+
+        </div>
+      </nav>
+
+      <div class="staff-image">
+        <img src="staff.jpg" alt="New Avenues for Youth Staff">
       </div>
+      <br>
+      <br>
 
-      <div id="apparel-listing">
-        <p>Create a New Listing</p>
-        <form name="myform" action="javascript:addListing()">
-          <div class="row">
-            <label>Author:</label>  <input id="author-input" name="Author" type="text" placeholder="Puppet"/> 
-          </div>
-          <div class="row">
-            <label>Description:</label>  <input id="desc-input" name="Desc" type="text" placeholder="purple"/>
-          </div>
-          <div class="row">
-            <label>Price:</label>  <input id="price-input" name="Price" type="text" placeholder="23.70"/>
-          </div>
-          <div class="row right">
-            <input id="submitButton" name="Submit"  type="submit" value="Add Listing"/>
-          </div>
-        </form>
-      </div>
-
-      <ul class="listings"></ul>
-
+      <div id="Uploaddata" class="tabcontent container">
+  		<p>Add document</p>
+  		<form ref='uploadForm' id='uploadForm' action='http://localhost:8889/upload' method='post' encType="multipart/form-data">
+  		  <input type="text" name="doctype" placeholder='Essay' />
+  		  <input type="text" name="data"  placeholder='Revision 2'/>
+  		  <input type="file" name="sampleFile" />
+  		  <input type='submit' value='Add Document' />
+  		</form>
     </div>
 
+      <div class="container" id="house-section">
+        <script>
+    function initMap() {
+        var latlon= {lat: 45.522224, lng: -122.679826};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 15,
+            center: latlon
+        });
+        var marker = new google.maps.Marker({
+            position: latlon,
+            map: map
+        });
+    }
+</script>
 
-	<script src="jquery-1.9.0.js"></script>
-	<script src="listings.js"></script>
+<br>
+<br>
+      </div>
+
+      <div class="container" id="ed-section">
+        <p><a href="ed.html">Education Resource Search</a></p>
+      </div>
+
+  	<script src="jquery-1.9.0.js"></script>
+  	<script src="listings.js"></script>
+
+      <div id="footer">
+        <div class="newAvesLink">
+          <a href="http://newavenues.org/">New Avenues Website</a>
+        </div>
+
+
+
+     </div>
+
+
 	</body>
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="reset.css" rel="stylesheet" type="text/css">
+    <link href="style.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+
+
+    <div class="wrapper">
+      <div id="header">
+          <h1>Educational Hub</h1>
+      </div>
+
+      <div id="container">
+          <h2>open course consortium</h2>
+
+      <div>
+      Stats: <input type="text" id="field1" style="width: 500px"><br><br>
+      <button type="button" onclick="get_stats()">Try it</button>
+      </div>
+      <!-- Languages: <input type="text" id="field2" style="width: 500px"><br><br>
+      <button type="button" onclick="get_languages()">Try it</button>
+       -->
+      
+      <select id="language_select" name="language", onclick="get_languages()", style="width: 500px"></select>
+          <option value="" selected="selected">- Please select a language -</option>
+
+      <div>
+      Search: <input type="text" id="field2" style="width: 500px"><br><br>
+      <button type="button" onclick="search()">Try it</button>
+      </div>
+
+
+    </div>
+
+	<script src="jquery-1.9.0.js"></script>
+  <script src="educational_hub.js"></script>
+
+	
+	</body>
+</html>
